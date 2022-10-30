@@ -22,36 +22,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-//API routes
-// app.get("/api/notes", (req,res)=>{
-//     fs.readFile("./db/db.json","utf-8", (err,data)=>{
-//         if(err){
-//             console.log(err);
-//             res.status(500).json({
-//                 msg:"uh oh!",
-//                 err:err
-//             })
-//         } else {
-//             const dataArr = JSON.parse(data);
-//             res.json(dataArr)
-//         }
-//     })
-// })
-// app.post("/api/notes", (req,res)=>{
-//     fs.readFile("./db/db.json","utf-8",(err,data)=>{
-//         if(err){
-//             console.log(err);
-//             res.status(500).json({
-//                 msg:'uh oh!',
-//                 err:err
-//             });
-//         } else{
-//             const {title, text } = req.body;
-
-//         }
-//     })
-// })
-
 app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT} 🚀`);
 });
